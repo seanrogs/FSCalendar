@@ -435,6 +435,10 @@
                 default:
                     break;
             }
+            if (isnan(height)) {
+                // Fix for nan issue
+                height = self.estimatedItemSize.height;
+            }
             CGRect frame = CGRectMake(x, y, width, height);
             frame;
         });
